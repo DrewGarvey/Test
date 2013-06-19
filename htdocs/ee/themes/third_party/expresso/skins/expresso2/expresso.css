@@ -1,0 +1,33 @@
+/*--- Expresso Skin Overwrite ---*/
+
+.cke_skin_expresso .cke_wrapper {
+	background-image: none !important;
+}
+
+span.cke_skin_expresso {
+	padding: 0 !important;
+}
+
+.cke_skin_expresso .cke_resizer {
+	height: 10px !important;
+	margin-top: 3px !important;
+}
+
+.cke_skin_expresso .cke_rcombo a, .cke_skin_expresso .cke_rcombo a:active, .cke_skin_expresso .cke_rcombo a:hover {
+	background: none !important;
+	height: 19px !important;
+	margin-right: 0 !important;
+	border: none !important;
+}
+
+/*--- Fix issues with Low Variables ---*/
+
+table.mainTable .cke_skin_expresso table {
+	margin-bottom: 0 !important;
+}
+
+table.mainTable .cke_skin_expresso td {
+	background: transparent !important;
+	padding: 0 !important;
+	border: none !important;
+}

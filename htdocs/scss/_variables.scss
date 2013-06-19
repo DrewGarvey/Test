@@ -1,0 +1,50 @@
+// Tell respond-min and respond-max to output all media queries by default
+$viewport-width: false !default;
+
+@mixin transition($trans, $duration: 0.1s, $function: linear) {
+  -webkit-transition: $trans $duration $function;
+  -moz-transition: $trans $duration $function;
+  -o-transition: $trans $duration $function;
+  -ms-transition: $trans $duration $function;
+  transition: $trans $duration $function;
+}
+@mixin gradient($top, $bottom, $fallback: "fallback.png") {
+  background-color: $bottom;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-image: url($fallback);
+  background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom)); 
+  background-image: -webkit-linear-gradient(top, $top, $bottom); 
+  background-image:    -moz-linear-gradient(top, $top, $bottom); 
+  background-image:      -o-linear-gradient(top, $top, $bottom);
+  background-image:         linear-gradient(to bottom, $top, $bottom); 
+}
+@mixin round($size) {
+  -webkit-border-radius: $size;
+          border-radius: $size;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+@mixin respond-min($width) {
+    @if $viewport-width {
+        @if $viewport-width >= $width {
+            @content;    
+        }
+    }
+    @else {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+@mixin respond-max($width) {
+    @if $viewport-width {
+        @if $viewport-width <= $width {
+            @content;    
+        }
+    }
+    @else {
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}

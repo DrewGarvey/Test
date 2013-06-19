@@ -1,0 +1,25 @@
+AddCharset UTF-8 .php
+DirectoryIndex index.php index.htm index.shtml index.html index
+
+RewriteEngine On
+
+# Funnel /page/-/* requests to local htdocs
+RewriteRule ^page/-/js/(.*) /js/$1 [R=301,L]
+RewriteRule ^page/-/images/static/(.*) /img/$1 [R=301,L]
+
+# Simple 404 for missing files
+<FilesMatch "(\.jpe?g|gif|png|bmp|ico)$">
+  ErrorDocument 404 "File Not Found"
+</FilesMatch>
+
+# EE 404 page for missing pages
+ErrorDocument 404 /index.php?/content/404/
+
+# Make EE Control Panel Custom Nav work
+RewriteCond %{QUERY_STRING} (.*?)(D=.+)&(C=.+)&(M=.+)
+RewriteRule ^index.php /admin.php?%1%2&%3&%4 [NC,L,R=301]
+
+# Remove index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L]

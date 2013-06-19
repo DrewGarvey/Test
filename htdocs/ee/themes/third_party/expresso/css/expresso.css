@@ -1,0 +1,40 @@
+#expresso_export_settings, #expresso_import_settings {
+	display: none;
+	margin: 10px 0 25px 0;
+	padding: 3px;
+}
+#expresso_export_settings textarea, #expresso_import_settings textarea {
+	border: 3px solid #3E4C54;
+	height: 55px;
+	margin-bottom: 5px;
+}
+
+#expresso_global_settings img {
+	vertical-align: bottom;
+	margin-bottom: 4px;
+}
+
+#expresso_global_settings .toolbar_icons, #expresso_global_settings .headers {
+	margin: 6px 0;
+}
+
+#expresso_global_settings .icon_set {
+	float: left;
+	margin: 2px 11px 2px 0;
+}
+
+#expresso_global_settings .icon_set:last-child {
+	margin-right: 0;
+}
+
+#expresso_global_settings .toolbar_icons input {
+	margin: 0 2px 9px 4px;
+}
+
+#expresso_global_settings .headers input {
+	margin: 0 2px 4px 4px;
+}
+
+#expresso_global_settings textarea {
+	height:  140px;
+}

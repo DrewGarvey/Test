@@ -1,0 +1,48 @@
+/**
+ * Low Events CSS file
+ *
+ * @package         low_events
+ * @author          Lodewijk Schutte ~ Low <hi@gotolow.com>
+ * @link            http://gotolow.com/addons/low-events
+ * @copyright       Copyright (c) 2012, Low
+ */
+
+#mainContent .low-events {
+	padding:14px 0;
+}
+
+.low-events input {
+	display:inline
+}
+
+.low-events input.date {
+	width:7em;
+	background-image:none;
+}
+
+.low-events input.time {
+	width:4.5em;
+}
+
+.low-events.low-all-day input.time {
+	display:none;
+}
+
+.low-events label {
+	display:inline;
+	width:auto;
+	cursor:pointer;
+	margin-left:14px;
+}
+
+.low-events input.low-error {
+	/*border-color:#c66;*/
+	background-color:#fff0f0;
+}
+
+
+#ui-datepicker-div {
+	-webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+	box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,15 @@
+{sv_livelook}
+{preload_replace:tv_meta=""}
+{!-- Set the Homepage Meta Description Here --}
+
+{embed="includes/.header" body_id="home" meta_description="{tv_meta}"}
+
+{exp:channel:entries channel="feature" status="{tv_status}" disable="member_data|categories|pagination"}
+    {title}
+    {feature_image}
+    {feature_summary}
+    <a href="{feature_link}" title="Learn More">More&raquo;</a>
+    {sv_edit_me}
+{/exp:channel:entries}
+
+{embed="includes/.footer" disqus="yes"}

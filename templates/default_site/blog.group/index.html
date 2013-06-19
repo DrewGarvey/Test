@@ -1,0 +1,50 @@
+{preload_replace:tv_page_title="Blog"}
+{preload_replace:tv_meta=""}
+
+{embed="includes/.header" title="{tv_page_title}{if segment_2 == 'c'}: {segment_3_category_name} Archives{/if}" body_id="blog" body_class="interior"}
+
+<div id="content" class="base" role="main">
+
+    {if segment_2 == "c"}
+        {exp:channel:category_heading channel="blog" relaxed_categories="yes"}
+          <h1>{tv_page_title} &mdash; {category_name}</h1>
+        {/exp:channel:category_heading}
+    {/if}
+
+    {if segment_2 != "c"}
+        <h1>{tv_page_title}</h1>
+    {/if}
+
+{exp:channel:entries channel="blog" limit="20" status="open" sort="desc" orderby="date" paginate="bottom" disable="member_data"}
+    <div class="entry{if blog_thumbnail} thumbnail clearfix{/if}">
+    	
+    	{!-- creates a div for the thumbnail to live in with the floatl class applied. set the width in the stylesheet for .entry-thumb --}
+    	{if blog_thumbnail}
+            <a href="{title_permalink=blog/entry}" class="entry-thumb floatl">
+                <img src="{blog_thumbnail}" />
+            </a>
+        <div class="entry-summary floatl">
+        {/if}
+        
+        <h2><a href="{title_permalink=blog/entry}">{title}</a></h2>
+        
+        {!-- Use the code below if this is a blog entry --}
+        <p>{blog_summary}&nbsp;<a href="{title_permalink=blog/entry}" title="Read More" class="more">Read More &raquo;</a></p>
+        
+        {!--closes summary div that is created if thumbnail exists--}
+        {if blog_thumbnail}
+        </div><!--/.entry-summary-->
+        {/if}
+    </div><!--/.entry-->
+
+{paginate}
+    {if "{total_pages}" != 1}
+    <p class="pagination">{pagination_links}</p>
+    {/if}
+{/paginate}
+
+{/exp:channel:entries}
+
+</div><!--/#content.base-->
+
+{embed="includes/.footer" side="default" disqus="yes"}

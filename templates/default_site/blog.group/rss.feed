@@ -1,0 +1,47 @@
+{sv_livelook}
+
+{preload_replace:tv_selected_blog="blog"}
+{preload_replace:tv_rss_title="{site_name} Blog"}
+{preload_replace:tv_rss_description=""}
+{preload_replace:tv_site_email=""}
+{preload_replace:tv_feed_limit="30"}
+{preload_replace:tv_link='{title_permalink={segment_1}/entry}'}
+{preload_replace:tv_content="{blog_content}"}
+{preload_replace:tv_author=""}
+
+{exp:rss:feed channel="{tv_selected_blog}" status="{tv_status}"}
+
+<?xml version="1.0" encoding="{encoding}"?>
+<rss version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+    <channel>
+    
+    <title>{exp:xml_encode}{tv_rss_title}{/exp:xml_encode}</title>
+    <link>{site_url}</link>
+    <description>{tv_rss_description}</description>
+    <dc:language>{channel_language}</dc:language>
+    <dc:rights>Copyright {gmt_date format="%Y"}</dc:rights>
+    <dc:date>{gmt_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
+    <admin:generatorAgent rdf:resource="http://expressionengine.com/" />
+    
+{exp:channel:entries channel="{tv_selected_blog}" limit="{tv_feed_limit}" rdf="off" status="{tv_status}" dynamic_start="on" disable="member_data|pagination"}
+    <item>
+      <title>{exp:xml_encode}{title}{/exp:xml_encode}</title>
+      <link>{tv_link}</link>
+      <guid>{tv_link}</guid>
+      <description><![CDATA[{tv_content}]]></description>
+      <dc:subject>{exp:xml_encode}{categories backspace="1"}{category_name}, {/categories}{/exp:xml_encode}</dc:subject>
+      <dc:date>{gmt_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
+      <dc:creator>{tv_author}</dc:creator>
+    </item>
+{/exp:channel:entries}
+    
+    </channel>
+</rss>
+
+{/exp:rss:feed}

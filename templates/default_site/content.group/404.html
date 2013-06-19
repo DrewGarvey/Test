@@ -1,0 +1,23 @@
+{!-- 
+* This template is silently loaded whenever an EE path is called but there is no matching EE entry.
+* The entry ID points to a generic not-found entry, it can be updated per installation if needed. 
+* When there is a non-ee path, and no corresponding shortcut, this page is also shown, provided that there is a shortcut for /404 pointing to /content/404.
+* If this installation has Google Analytics tracking, be sure and uncomment the GA code below so that 404 pages can be tracked.
+--}
+
+{embed="includes/.header" body_id="pages" body_class="interior" title="Page Not Found"}
+
+<div id="content" class="base" role="main">
+<h1>Page Not Found</h1>
+<p>Oops. The page you are looking for cannot be found. <a href="/">Click here</a> to return to the homepage.</p>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(["_trackEvent", "404",document.location.pathname + document.location.search, document.referrer, 0, true]);
+</script>
+<!-- END Google Analytics -->
+
+</div><!-- /#content.base -->
+
+{embed="includes/.footer" side="default"}

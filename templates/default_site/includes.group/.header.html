@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]>
+<html lang="en" class="no-js oldie ie6">
+<![endif]-->
+<!--[if IE 7 ]>
+<html lang="en" class="no-js oldie ie7">
+<![endif]-->
+<!--[if IE 8 ]>
+<html lang="en" class="no-js oldie ie8">
+<![endif]-->
+<!--[if IE 9 ]>
+<html lang="en" class="no-js ie9">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+	<head>
+        <meta charset="utf-8">
+        
+        {!-- if seo_lite is installed, uncomment the following.  You need to pass along an {entry_id} via the seo_id embed parameter if you want it used. --}
+        
+        {!--
+        {if embed:seo_id}
+        {exp:seo_lite entry_id="{embed:seo_id}"}
+        {/if}
+        --}
+        
+        {!-- you can also set certain fields via direct embed parameters. --}
+        {if embed:meta_description}
+        <meta name="description" content="{embed:meta_description}">
+        
+        <meta property="og:description" content="{embed:meta_description}">
+        {/if}
+        {if embed:meta_thumbnail}
+        <meta property="og:image" content="{embed:meta_thumbnail}">
+        {/if}
+        
+        {!--use chrome frame, if installed--}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        {if embed:title}
+        <meta property="og:title" content="{embed:title}">
+        {/if}
+        <meta name="referrer" content="always">
+
+        <title>{if embed:title}{embed:title} | {/if}{site_name}</title>
+        
+        {!-- For desktop browser favorite icon (16x16):  --}
+        {!-- <link rel="shortcut icon" href=""> --}
+        {!-- For iPhone 4 with high-resolution Retina display:  --}
+        {!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href=""> --}
+        {!-- For iPad:  --}
+        {!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href=""> --}
+        {!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices (57x57):  --}
+        {!-- <link rel="apple-touch-icon-precomposed" href=""> --}
+        
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{path=blog/rss}">
+        
+        {!-- include this if not using modernizr.js for HTML5 support. Will change the no-js class in the html element to js --}
+        {!-- <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>--}
+
+        {if global:env == 'local'}
+            <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/css/styles-desktop.dev.css">
+            <![endif]-->
+            <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="/css/styles.dev.css">
+            <!--<![endif]-->
+        {if:else}
+            <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/styles/index-desktop.css">
+            <![endif]-->
+            <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="/styles/index.css">
+            <!--<![endif]-->
+        {/if}
+
+        {if global:env == 'local'}
+            <script src="/js/lib/jquery-1.8.3.js"></script>
+            <script src="/js/source.dev.js"></script>
+            <script src="/js/main.js"></script>
+        {if:else}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="/js/source-min.js"></script>
+            <script src="/js/main.js"></script>
+        {/if}
+
+        {!-- BSD Source and Subsource Tracking --}
+        {exp:blue_source_tracking}           
+
+{!-- Setup the Account and DomainName --}
+        <!-- START Google Analytics -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '<!--place id here-->']);
+            _gaq.push(['_setDomainName', location.hostname.split(".").slice(-2).join(".")]); {!--Override this for forced third level domains, like sitename.co.uk --}
+            _gaq.push(['_setAllowAnchor', true]);
+            _gaq.push(['_setAllowLinker', true]);
+       </script>
+       <script src="//dnwssx4l7gl7s.cloudfront.net/bsdaction/default/page/-/js/analytics/ga_integration-min.js"></script>
+       <script>
+
+            _gaq.push(['_setSiteSpeedSampleRate', 20]);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <!-- END Google Analytics -->
+
+    </head>
+
+    <body{if embed:body_id} id="{embed:body_id}"{/if}{if embed:body_class} class="{embed:body_class}"{/if}>
+        {!--the container div is closed in the footer after the closing </footer> tag--}
+        <div id="container">
+
+            <header role="banner">
+            
+                <form class="signup" method="post" action="{path='page/s'}" role="form">
+                    <label for="header-signup-email">Email Address</label>
+                    <input type="text" name="email" placeholder="Email Address" id="header-signup-email">
+                    <label for="header-signup-zip">Zip Code</label>
+                    <input type="text" name="zip" placeholder="Zip Code" id="header-signup-zip">
+                    <input name="submit-btn" type="submit" value="Sign Up" />
+                </form><!-- /.signup -->
+
+                <nav role="navigation">
+
+                </nav>
+                
+            </header>

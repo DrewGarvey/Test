@@ -1,0 +1,5 @@
+// this is used to generate desktop styles for IE
+// only needed on responsive designs.
+
+$viewport-width: 1024px;
+@import 'styles';

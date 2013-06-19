@@ -1,0 +1,23 @@
+    {!-- close the content div --}
+
+        {if embed:side != ""} {!-- loads whatever sidebar is passed from the parent template --}
+        {embed="includes/.sidebar-{embed:side}"}
+        {/if}
+
+            <footer role="contentinfo">
+                {!--displays copyright year as current year--}
+                {!--
+                &copy; {current_time format="%Y"}
+                --}
+            </footer>
+        </div> <!-- /#container-->
+
+    {if embed:disqus == "yes"}
+    	{if segment_1 != "preview"}
+    {!-- The disqus widget should NOT show on the live look preview --}
+    {!-- Disqus comment count code goes here --}
+    	{/if}
+    {/if}
+
+    </body>
+</html>

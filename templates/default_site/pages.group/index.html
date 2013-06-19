@@ -1,0 +1,19 @@
+{sv_livelook}
+
+{exp:channel:entries channel="pages" limit="1" disable="member_data|pagination" status="{tv_status}" require_entry="yes"}
+
+{if no_results}
+{redirect="404"}
+{/if}
+
+{embed="includes/.header" title="{title}" body_id="pages" body_class="interior{if pages_sidebar == "none"} full-width{/if}" seo_id="{entry_id}"}
+
+<article id="content" class="base" role="main">
+    <h1>{title}</h1>
+    {pages_content}
+    {sv_edit_me}
+</article><!-- /#content.base -->
+
+{embed="includes/.footer"{if pages_sidebar != "none"} side="{pages_sidebar}"{/if}}
+
+{/exp:channel:entries}

@@ -1,0 +1,31 @@
+{!-- This template pulls wrappers into the BSD wrappers tool. --}
+
+{if segment_2 == "header"}
+
+    {if segment_3 == "full-width"}
+    {embed="includes/.header" body_id="" body_class="full-width"} 
+    {!-- Enter Full-Width Wrapper Code --}
+    <div id="content" class="base">
+        <div id="framework">
+
+    {if:else}
+    {embed="includes/.header" body_id=""}
+    {!-- other header stuff --}
+    <div id="content" class="base">
+        <div id="framework">
+    {/if}
+{if:elseif segment_2 == "footer"}
+    {if segment_3 == "full-width"}
+        </div> <!-- /#framework -->
+    </div> <!-- /#content -->
+
+    {!-- Enter Full-Width Wrapper Code --}
+    {embed="includes/.footer" body_id=""}
+
+    {if:else}
+        </div> <!-- /#framework -->
+    </div> <!-- /#content -->
+    {!-- other footer stuff --}
+    {embed="includes/.footer" body_id="" side="default"}
+    {/if}
+{/if}

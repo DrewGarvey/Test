@@ -1,0 +1,30 @@
+#bbr_ck_custom_settings table{
+    width: 100%;
+}
+#bbr_fieldtype_settings_container label{
+    cursor: pointer;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.bbr_selectbox_container select{
+    -moz-border-radius-bottomleft:3px;
+    -moz-border-radius-bottomright:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-topright:3px;
+    border:1px solid #B6C0C2;
+    height:200px;
+    color:#5F6C74;
+    outline-color:-moz-use-text-color;
+    outline-style:none;
+    outline-width:0;
+    padding:4px;
+    width:99%;
+}
+.bbr_small_info{
+    font-size: 10px;
+    color: #999999;
+    padding: 5px;
+}
+.bbr_delete_button_container{
+}

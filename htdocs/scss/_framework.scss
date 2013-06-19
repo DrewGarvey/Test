@@ -1,0 +1,237 @@
+/* 07 =FRAMEWORK
+------------------------- */
+/*
+SKIN OVERRIDES
+Last Update: March 7, 2011
+NOTE: These definitions assume that framework elements have been wrapped in a div with the id "framework".
+For the YUI styles to work the body id should be "bsd"
+*/
+ 
+/*=TYPOGRAPHY
+---------------------------------------------------------- */
+#framework #SKIN h1, /*If you change the font-soze for h1 or it's top margin or padding properties be sure to change the top margin property for "#SKIN #account_actions" such that the base line for the elements within line up with h1 in control_set div*/ 
+#framework #SKIN .basic .main #eventdetail .title, /*Event Title*/
+#framework #profiledetail #sectionheader,
+#framework #stdheader #title /*Page title on Outreach pages*/
+{ font-size: 24px; font-weight: bold; line-height: 30px; margin-bottom: 6px; }
+ 
+/*if using cufon or typekit for headers be sure to target the following header ids/classes
+#titletext - header for Outeach pages
+.headertitle — header for Comunity pages
+*/
+#framework #contribution .contribheader, /*Section headers on Contribute form*/
+#framework #SKIN h2,
+#framework #sectionheader,
+#framework #SKIN .widget_header,
+#framework #SKIN .widget_title,
+#framework #community .communitypostinlist .title, /*Blog post title on community web page*/
+#framework #community .header, /*Community page headers */
+#framework #community .communitypostfull .title, /*Community title for full blog post*/
+#framework #community .journaltitle,
+#framework #community .journalarchive .journalarchivetitle,
+#framework a#host-button,
+#framework #loginform .logintitle,
+#framework #signupform .signuptitle, 
+#framework #outreach_content #loginform .logintitle,
+#framework #outreach_content #signupform .signuptitle,
+#framework #manageform .managetitle,
+#framework #forgotpw .header
+{ font-size: 18px; font-weight: bold; line-height: 24px; margin-bottom: 6px; }
+ 
+#framework #SKIN h3,
+#framework #SKIN .basic .main .typedescheader,
+#framework #community .postlist table.head .text, /*Table heading on Community Dashboard page*/
+#framework #community .subheader, /*Subheader on the Community Blog Entry Preview page*/
+#framework #community .profileteaser .title, /* Profile teaser title on Blog home page*/
+#framework #odgettingstarted .odsechead,
+#framework #odprogress .odsechead, 
+#framework #odyourpage .odsechead, 
+#framework #odstats .odsechead, 
+#framework #odaddress .odsechead, 
+#framework #odgroup .odsechead,
+#framework #outreach_content .omhead
+{ font-size: 14px; font-weight: bold; line-height: 20px; margin-bottom: 6px; }
+ 
+#framework #SKIN h4, #framework #SKIN h5 { font-size: 12px; font-weight: bold; line-height: 18px; }
+ 
+/*HEADERS WITH BOTTOM BORDERS*/
+#framework #contribution .contribheader, /*Section headers on Contribute form*/
+#framework #sectionheader,
+#framework .sectionheader,
+#framework #SKIN .header,
+#framework #SKIN .basic .main .typedescheader,
+#framework #community .header /*Community page headers */
+#framework #community .communitypostfull .title, /*Community title for full blog post*/
+#framework #community .journaltitle,
+#framework #community .journalarchive .journalarchivetitle,
+#framework #stdheader, /*Header for Outreach pages*/
+#framework #community .profileteaser .title, /* Profile teaser title on Blog home page*/
+#framework #odgettingstarted .odsechead,
+#framework #odprogress .odsechead, 
+#framework #odyourpage .odsechead, 
+#framework #odstats .odsechead, 
+#framework #odaddress .odsechead, 
+#framework #odgroup .odsechead,
+#framework #outreach_content .omhead,
+#framework #manageform .managetitle,
+#framework #forgotpw .header
+{ border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+ 
+/*WIDGET HEADERS*/
+#framework #SKIN .widget_header { background: #eee; border-bottom: 1px solid #ddd; margin-bottom: 6px; padding: 5px 10px; position: relative; }
+ 
+/*SUB-HEADERS*/
+#framework #SKIN .widget_subheader, /*Widget Subheader on the dashboard*/
+#framework #community .subheader /*Subheader on the Community Blog Entry Preview page*/
+{ background: #F2F7F7; border-bottom: 1px solid #ddd; padding: 5px 10px; }
+ 
+/*=FORM ELEMENTS
+---------------------------------------------------------- */
+#framework .checkbox, #framework .radiobutton, #framework.label, #framework .text { margin: 0 .5em 0 0; }
+ 
+/*=BUTTONS
+---------------------------------------------------------- */
+/*INPUT BUTTONS*/
+#framework input[type=button],
+#framework input[type=submit],
+#framework .submit,
+#framework #invitationpage #submit_button,
+#framework #date-filter,
+#framework .loginbutton input,
+#framework .signupbutton input,
+#framework #community input[type=submit],
+#framework .utils_search button
+{ cursor: pointer; } /*Targets most Buttons*/
+ 
+/*INPUT HOVER STATES
+Note this will only work for modern browsers*/
+#framework input[type=button]:hover,
+#framework input[type=submit]:hover,
+#framework input:hover.submit,
+#framework #invitationpage input:hover#submit_button,
+#framework button:hover#date-filter,
+#framework .loginbutton input:hover,
+#framework .signupbutton input:hover,
+#framework #community input[type=submit]:hover,
+#framework .utils_search button:hover
+{  }
+ 
+/*RSVP and DETAILS BUTTONS*/
+#framework #event_results .event_footer .links { float: left; }
+#framework #event_results .event_footer .links .detail_button, #framework #event_results .event_footer .links .rsvp_button { float: right; } 
+#framework #event_results .event_footer .links .detail_button a, #framework #event_results .event_footer .links .rsvp_button a { display: block; margin-left: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 2px 10px; }
+#framework #event_results .event_footer .links .detail_button a { background: #eee; border: 1px solid #ccc; padding: 2px 10px 1px; }
+#framework #event_results .event_footer .links .rsvp_button a { background: #555; color: #fff; padding: 3px 10px 2px; }
+#framework #event_results .event_footer .links .detail_button a:hover, #framework #event_results .event_footer .links .rsvp_button a:hover { background: #33; border-color: #333; color: #eee; } /*Hover state for RSVP and Details buttons*/
+ 
+/*CONTACT IMPORTER BUTTOM FOR SHARE AND INVITE FORMS*/
+#framework #contact_importer_button { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; font-size: 12px; } /*You can change the background color to match your other input button styles*/
+ 
+/*SEARCH BUTTON*/
+#framework .search_form button { }
+ 
+/*=TEXT INPUT FIELDS AND TEXTAREAS
+---------------------------------------------------------- */
+#framework input.text, #framework textarea {  } /*Use this definition to target most of the text input fields*/
+ 
+/*=TABS
+NOTE If the background color for your page is not white you will have to update the bottom border color for the active tabs for Framework, Events and Friends i.e.
+#framework #SKIN #blue_hat .blue_hat_active { background: none; border-bottom: 1px solid #fff; font-weight: bold; }
+#framework ul#event_order li.active { background: none; border-bottom: 1px solid #fff; font-weight: bold; }
+#framework #SKIN #friends_tabs ul li.active_tab  { background: none; border: 1px solid #ddd; border-bottom: 1px solid #fff; }
+---------------------------------------------------------- */
+/*FRAMEWORK TABS*/
+#framework #SKIN #blue_hat { background: none;  border-bottom: 1px solid #ddd; height: 43px; }
+#framework #SKIN #blue_hat ul { display: inline; float: right; height: auto; margin: 0 5px; padding: 18px 0 0 0; }
+#framework #SKIN #blue_hat li { background: #eee; border: 1px solid #ddd; border-top-left-radius: 3px; display: inline; float: right; padding: 5px 10px 4px; text-decoration: none; }
+#framework #SKIN #blue_hat li a { color: #888; text-decoration: none; }
+#framework #SKIN #blue_hat .blue_hat_active { background: none; border-bottom: 1px solid #fff; font-weight: bold; }
+#framework #SKIN #blue_hat .blue_hat_active a { color: #555; }
+#framework #SKIN #blue_hat li a:hover { background: none; color: #555; }
+ 
+/*EVENT TABS*/
+#framework ul#event_order { border-bottom: 1px solid #ddd; clear: both; float: left; list-style-type: none; margin: 0 0 10px 0; top: 0;  width: 100%; }
+#framework ul#event_order li {  background: #eee; border: 1px solid #ddd; color: #888; display: inline; float: left; margin: 0 0 -1px 5px; padding: 5px 10px 4px; text-decoration: none; }
+#framework ul#event_order li a { color: #888;  }
+#framework ul#event_order a:hover { color: #555; }
+#framework ul#event_order li.active { background: none; border-bottom: 1px solid #fff; font-weight: bold; }
+#framework ul#event_order li.active a { color: #555; }
+ 
+/*WIDGET TABS*/
+/*Note that the active tab background color should be the same as the .widget_header background color under the WIDGET HEADERS category above*/
+#framework #SKIN .widget_tabs { margin: 0; padding: 0;  }
+#framework #SKIN .widget_tabs li { border-top-left-radius: 3px; float: left; list-style: none; padding: 5px 10px 4px 10px; margin: 0 5px 0 0; list-style-type: none; }
+#framework #SKIN .widget_tabs li.active_tab { background: #eee; font-weight: bold; }
+#framework #SKIN .widget_tabs li.inactive_tab { background: #ddd; }
+ 
+/*FRIENDS TABS*/
+#framework #SKIN #friends_tabs { border-bottom: 1px solid #ddd; margin: 18px 0 6px 0; }
+#framework #SKIN #friends_tabs ul { margin: 0; padding: 5px 0 0 0; list-style: none; }
+#framework #SKIN #friends_tabs li { border-top-left-radius: 3px; border-top-right-radius: 3px; display: inline; float: left;  margin: 0 0 -1px 5px; list-style-type: none; padding: 5px 10px 4px; }
+#framework #SKIN #friends_tabs ul li.active_tab  { background: none; border: 1px solid #ddd; border-bottom: 1px solid #fff; }
+#framework #SKIN #friends_tabs ul li.active_tab a { color: #555; font-weight: bold; }
+#framework #SKIN #friends_tabs ul li.inactive_tab  {  background: #eee; border: 1px solid #ddd;  }
+ 
+/*=SPEAKOUT TABS */
+#framework #speakout #tabs { margin-top: 18px; }
+#framework #speakout #nav-tabs, #framework #speakout #tip-tabs { border-bottom: 1px solid #ddd; clear: both; float: left; list-style-type: none; margin: 0 0 18px 0; top: 0;  width: 100%; }
+#framework #speakout td.tips { padding: 0 10px; }
+#framework #speakout #tip-tabs { width: 300px; }
+#framework #speakout #nav-tabs li, #framework #speakout #tip-tabs li { background: #eee; border: 1px solid #ddd; color: #888; display: inline; float: left; margin: 0 0 -1px 5px; padding: 5px 10px 4px; text-decoration: none; }
+#framework #speakout #nav-tabs li.tab-on, #framework #speakout #tip-tabs li.tip-on { background: none; border-bottom: 1px solid #fff; color: #555; font-weight: bold; }
+#framework #speakout #nav-tabs li.tab-off, #framework #speakout #tip-tabs li.tip-off { cursor: pointer; }
+ 
+ 
+/*YUI POP OVER
+This controls the style of the pop over opened after clicking the contact importer button
+As noted above, in order for this to work the body id should be "bsd"
+---------------------------------------------------------- */
+#bsd .yui-panel { border: 1px solid #ccc; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+#bsd .yui-panel-container.shadow .underlay { display: none; }
+#bsd .yui-panel .container-close { right: 10px; } /*This targets the close button in the popover. You can replace the default image with one of your choosing. Image dimensions should be 12px square*/
+#bsd .yui-panel .hd { background: #eee; color: #333; border: none; border-bottom: 1px solid #ddd; font-size: 18px; font-weight: bold; line-height: 24px; margin-bottom: 6px; padding: 10px; }
+#bsd .yui-panel .bd { font-size: 12px; line-height: 18px; padding: 6px; }
+#bsd #contact_importer_wrapper { margin: 0; }
+#bsd #contact_importer_wrapper #contact_importer_error { margin: 18px 0 0 0; }
+#bsd #contact_importer_dialog .button-group button { background: #eee; border: 1px solid #ddd; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; cursor: pointer; padding: 3px 10px; }
+/*Contact Listings*/
+#bsd #contact_importer_wrapper #results_table_header { background: #eee; }
+#bsd #contact_importer_wrapper #results_table_outer { border: 1px solid #ddd; }
+ 
+ 
+ 
+/*=LAYOUT
+---------------------------------------------------------- */
+/*SOCIAL NET WIDGET COLUMNS*/
+#framework #SKIN #widget_group_1 { float: left; width: 49%; } /*Left column*/
+#framework #SKIN #widget_group_2 { float: right; width: 49%; } /*Right column*/
+ 
+/*SPEAKOUT*/
+ 
+#framework .group_field { margin-bottom: 10px; float: left; margin-right: 5px; }
+#framework #speakout .splash { margin: 0 0 20px 0; }
+#framework #speakout table { clear: left; margin: 0 20px 10px 0; }
+ 
+#framework #speakout #recipient_table { width: 300px; }
+#framework #speakout .recipient-header { font-weight: bold; }
+#framework #speakout .recipient-divider { padding-top: 10px; font-style: italic; }
+#framework #speakout .recipient-header th { text-align: auto !important }
+#framework #speakout .stat { text-align: right; padding-right: 4px; }
+#framework #speakout td { vertical-align: top; }
+#framework #speakout .step { margin-top: 15px; }
+#framework #speakout .field { width: 50%; padding-left: 10px; }
+#framework #speakout th.divider { padding: 10px; font-size: 16px; background: #eee; }
+#framework #speakout #speakout_form { margin-top: 20px; }
+#framework #speakout h4 { font-size: 16px; }
+ 
+#framework #speakout table#landing div.goal { float: right; margin: 10px; padding: 15px 15px 0; width: 280px; border: 1px solid #CCC; }
+#framework #speakout table#landing div.goal td { padding: 5px; }
+#framework #speakout table#landing div.goal input.landing-button, #framework #speakout table#landing div.goal input.landing-button-over { display: block; margin-top: 15px; }
+#framework #speakout table#landing div.goal input#addr1, #framework #speakout table#landing div.goal input#addr2, #framework #speakout table#landing div.goal input#email { width: 200px; }
+ 
+ 
+ 
+ 
+/*=PLEASE DO NOT DELETE OR MODIFY ANY OF THE STYLES BELOW
+---------------------------------------------------------- */
+#framework #SKIN #widget_directory_search_groups_by_keyword { float: none !important; }

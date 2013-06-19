@@ -1,0 +1,86 @@
+/* 02 =COMMON STYLES
+------------------------- */
+
+body {
+    
+}
+
+select, input, textarea {
+      color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+.base h1 {
+    font-size: 28px;
+}
+
+.base h2 {
+    font-size: 24px;
+}
+
+.base h3 {
+    font-size: 20px;
+}
+
+.base h4 {
+    font-size: 18px;
+}
+
+.base p {
+    
+}
+
+a:hover, a:active {
+    outline: none;
+}
+
+a, a:active, a:visited {
+    color: #607890;
+}
+
+a:hover, a:focus {
+    color: #036;
+}
+
+a:link {
+    -webkit-tap-highlight-color: #FF5E99;
+}
+
+blockquote {
+    
+}
+
+.base ul, .base ol {
+    margin-left: 1.8em;
+}
+
+.base ul {
+    
+}
+
+.base ol {
+    
+}
+
+.base ul li, .base ol li {
+    
+}
+
+.base ul li {
+    list-style: disc;
+}
+
+.base ol li {
+    list-style:decimal;
+}
+
+.base li ol {
+    
+}
+
+.base li ul {
+    
+}
